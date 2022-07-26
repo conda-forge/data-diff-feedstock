@@ -1,5 +1,5 @@
 {% set name = "data-diff" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/data-diff-{{ version }}.tar.gz
-  sha256: 74c835ce6549a01f6b51fa23659a47af020a06e5e945964f023f221ef2056951
+  sha256: 5c2ffc46d334b10110e0c27f60252e17e771a75faa00e4d3777228e28cc5db80
 
 build:
   noarch: python
