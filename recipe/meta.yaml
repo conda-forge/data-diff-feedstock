@@ -1,5 +1,5 @@
 {% set name = "data-diff" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/data-diff-{{ version }}.tar.gz
-  sha256: ea233248655e7f89be31db072c0755fe7c781286aeba23ed4c5b72e620166f5e
+  sha256: ab151ee832f0a93492c2a4021eb482d561b7be9d48a22b2cba93692a35434d1b
 
 build:
   noarch: python
@@ -20,13 +20,14 @@ requirements:
   host:
     - pip
     - poetry-core >=1.0.0
-    - python >=3.6,<4.0
+    - python >=3.7,<4.0
   run:
     - click >=8.1,<9.0
     - dsnparse
-    - python >=3.6,<4.0
-    - rich >=10.16.2,<11.0.0
+    - python >=3.7,<4.0
+    - rich
     - runtype >=0.2.6,<0.3.0
+    - sqeleton >=0.0.5,<0.0.6
     - toml >=0.10.2,<0.11.0
 
 test:
