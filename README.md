@@ -1,11 +1,11 @@
-About data-diff
-===============
+About data-diff-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/data-diff-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/datafold/data-diff
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/data-diff-feedstock/blob/main/LICENSE.txt)
 
 Summary: Command-line tool and Python library to efficiently diff rows across two different databases.
 
