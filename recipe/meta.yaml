@@ -24,12 +24,15 @@ requirements:
   run:
     - click >=8.1,<9.0
     - dsnparse
-    - packaging
     - python >=3.7,<4.0
     - rich
     - runtype >=0.2.6,<0.3.0
     - sqeleton ==0.0.8
     - toml >=0.10.2,<0.11.0
+    
+    # These are required though not listed in upstream requirements
+    - packaging
+    - requests
 
 test:
   imports:
