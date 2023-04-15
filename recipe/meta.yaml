@@ -34,6 +34,7 @@ requirements:
 
     # These are required though not listed in upstream requirements
     - packaging
+    - pydantic
     - requests
 
 test:
