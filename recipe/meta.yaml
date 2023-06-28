@@ -21,19 +21,20 @@ requirements:
   host:
     - pip
     - poetry-core >=1.0.0
-    - python >=3.7,<4.0
+    - python >=3.7.2,<4.0
   run:
-    - click >=8.1,<9.0
+    - click >=8.1.0,<9.0.0
     - dbt-artifacts-parser >=0.3.0,<0.4.0
     - dbt-core >=1.0.0,<2.0.0
-    - dsnparse
+    - dsnparse <0.2.0
     - keyring
-    - python >=3.7,<4.0
+    - python >=3.7.2,<4.0
+    - pyyaml
     - rich
-    - runtype
-    - sqeleton ==0.0.8
+    - runtype >=0.2.6,<0.3.0
+    - tabulate >=0.9.0,<0.10.0
     - toml >=0.10.2,<0.11.0
-    - tabulate >=0.9.0,<1.0.0
+    - typing_extensions
     - urllib3 <2
 
     # These are required though not listed in upstream requirements
@@ -46,7 +47,7 @@ test:
     - data_diff
   commands:
   # Skip pip check due to prance version checking being broken
-#     - pip check
+    - pip check
     - data-diff --help
     - sqeleton --help
   requires:
