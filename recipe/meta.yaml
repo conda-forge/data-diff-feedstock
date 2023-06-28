@@ -1,5 +1,5 @@
 {% set name = "data-diff" %}
-{% set version = "0.7.8" %}
+{% set version = "0.7.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: a94841fd73446d7fe6eed79f949a00682537a763b8c5dc606bfcfc1decc748b5
+  sha256: e7828642f2d9aefb93fc226f7fdcfcf3a67a31431b7c362289e86c478efb861a
 
 build:
   noarch: python
@@ -48,7 +48,7 @@ test:
   # Skip pip check due to prance version checking being broken
 #     - pip check
     - data-diff --help
-    - sqeleton --help 
+    - sqeleton --help
   requires:
     - pip
 
