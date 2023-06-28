@@ -46,8 +46,8 @@ test:
   imports:
     - data_diff
   commands:
-  # Skip pip check due to prance version checking being broken
-    - pip check
+    # Skip pip check due to prance version checking being broken
+    # - pip check
     - data-diff --help
     - sqeleton --help
   requires:
