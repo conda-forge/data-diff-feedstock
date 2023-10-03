@@ -15,7 +15,6 @@ build:
   number: 0
   entry_points:
     - data-diff = data_diff.__main__:main
-    - sqeleton = data_diff.sqeleton.__main__:main
 
 requirements:
   host:
@@ -45,9 +44,8 @@ test:
     - data_diff
   commands:
     # Skip pip check due to prance version checking being broken
-    # - pip check
+    - pip check
     - data-diff --help
-    - sqeleton --help
   requires:
     - pip
 
