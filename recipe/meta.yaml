@@ -21,24 +21,23 @@ requirements:
   host:
     - pip
     - poetry-core >=1.0.0
-    - python >=3.7.2,<4.0.0
+    - python >=3.8.0,<4.0.0
   run:
-    - click >=8.1.0,<9.0.0
-    - dbt-artifacts-parser >=0.4.2,<0.5.0
-    - dbt-core >=1.0.0,<2.0.0
+    - python >=3.8.0,<4.0.0
+    - pydantic ==1.10.12
     - dsnparse <0.2.0
-    - keyring
-    - python >=3.7.2,<4.0.0
+    - click >=8.1,<9.0
     - rich
-    - runtype >=0.2.6,<0.3.0
-    - tabulate >=0.9.0,<0.10.0
     - toml >=0.10.2,<0.11.0
-    - typing_extensions
+    - dbt-core >=1.0.0,<2.0.0
+    - keyring
+    - tabulate >=0.9.0,<1.0.0
     - urllib3 <2
+    - typing-extensions >=4.0.1
+    - attrs >=23.1.0,<24.0.0
 
     # These are required though not listed in upstream requirements
     - packaging
-    - pydantic
     - requests
 
 test:
