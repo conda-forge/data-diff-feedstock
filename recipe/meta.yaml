@@ -30,7 +30,7 @@ requirements:
     - toml >=0.10.2,<0.11.0
     - dbt-core >=1.0.0,<2.0.0
     - keyring
-    - tabulate >=0.9.0,<1.0.0
+    - tabulate >=0.9.0,<0.10.0
     - urllib3 <2
     - typing-extensions >=4.0.1
     - attrs >=23.1.0,<24.0.0
