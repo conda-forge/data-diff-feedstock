@@ -41,7 +41,7 @@ requirements:
     - requests
 
     # From mashumaro[msgpack]
-    - msgpack >=0.5.6
+    - msgpack-python >=0.5.6
 
 test:
   imports:
