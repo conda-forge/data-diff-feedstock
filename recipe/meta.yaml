@@ -23,7 +23,8 @@ requirements:
     - python >=3.8,<4.0
   run:
     - python >=3.8,<4.0
-    - pydantic >=1.10.12
+    # Pinned because pydantic deprecated certain regex function upstream still using
+    - pydantic ==1.10.12
     - dsnparse <0.2.0
     - click >=8.1
     - rich
