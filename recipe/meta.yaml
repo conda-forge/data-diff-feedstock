@@ -24,7 +24,7 @@ requirements:
   run:
     - python >={{ python_min }},<4.0
     # Pinned because pydantic deprecated certain regex function upstream still using
-    - pydantic ==1.10.12
+    - pydantic >=1.10.12,<2
     - dsnparse <0.2.0
     - click >=8.1
     - rich
@@ -48,7 +48,6 @@ test:
   imports:
     - data_diff
   commands:
-    # Skip pip check due to prance version checking being broken
     - pip check
     - data-diff --help
   requires:
