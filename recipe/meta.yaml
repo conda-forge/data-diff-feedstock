@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 4a6d34a5017098673d65dd926335fe602d25ec9159976ead207ebb17528768d0
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - data-diff = data_diff.__main__:main
 
@@ -20,11 +20,11 @@ requirements:
   host:
     - pip
     - poetry-core >=1.0.0
-    - python >=3.8,<4.0
+    - python {{ python_min }}
   run:
-    - python >=3.8,<4.0
+    - python >={{ python_min }},<4.0
     # Pinned because pydantic deprecated certain regex function upstream still using
-    - pydantic ==1.10.12
+    - pydantic >=1.10.12,<2
     - dsnparse <0.2.0
     - click >=8.1
     - rich
@@ -48,11 +48,12 @@ test:
   imports:
     - data_diff
   commands:
-    # Skip pip check due to prance version checking being broken
-    - pip check
+    # Pause pip check due to dsnparse pinned on a pre-CFEP-25 build
+    # - pip check
     - data-diff --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/datafold/data-diff
